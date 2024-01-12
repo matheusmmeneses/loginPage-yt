@@ -605,7 +605,11 @@ vite-plugin-vuetify@^2.0.0, vite-plugin-vuetify@>=1.0.0-alpha.12:
   optionalDependencies:
     fsevents "~2.3.3"
 
+<<<<<<< Updated upstream
 vue@^3.0.0, vue@^3.2.25, vue@^3.3.0, "vue@>= 3.0.0 < 4", "vue@2 || 3", vue@3.4.10:
+=======
+vue@^3.0.0, vue@^3.2.25, vue@^3.3.0, "vue@2 || 3", vue@3.4.10:
+>>>>>>> Stashed changes
   version "3.4.10"
   resolved "https://registry.npmjs.org/vue/-/vue-3.4.10.tgz"
   integrity sha512-c+O8qGqdWPF9joTCzMGeDDedViooh6c8RY3+eW5+6GCAIY8YjChmU06LsUu0PnMZbIk1oKUoJTqKzmghYtFypw==
