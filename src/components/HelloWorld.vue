@@ -4,7 +4,7 @@
       <v-col cols="12" sm="10">
         <v-card class="elevation-6 mt-10">
           <v-window v-model="step">
-            <v-window-item :value="1" them>
+            <v-window-item :value="1" >
               <v-row>
                 <v-col cols="12" sm="6">
                   <v-card-text class="mt-12">
@@ -16,19 +16,19 @@
                         <v-row align="center" justify="center">
                           <v-col cols="12" sm="8">
                             <v-text-field v-model="emailDefaultValue"
-                            label="Email" outlined dense color="blue" autocomplete="false" class="mt-16" type="email" 
+                            label="Email" outlined dense color="deep-purple-lighten-5" autocomplete="false" class="mt-16" type="email" 
                             hint="Enter your email to access this website" placeholder="your@email.com" :rules="rules"></v-text-field>
                             <v-text-field v-model="passwordDefaultValue"
-                            label="Password" outlined dense color="blue" autocomplete="false" :append-inner-icon="marker ? 'mdi-eye' : 'mdi-eye-off'"
+                            label="Password" outlined dense color="deep-purple-lighten-5" autocomplete="false" :append-inner-icon="marker ? 'mdi-eye' : 'mdi-eye-off'"
                             :type="passwordVisible ? 'text' : 'password'" class="mt-16" hint="Enter your password to access this website" 
                             placeholder="Password" @click:append-inner="togglePasswordVisibility" :rules="rules"></v-text-field>
                             <v-row>
                               <v-col cols="12" class="d-flex justify-space-between align-center">
-                                <v-checkbox label="Remember me" color="blue" hide-details></v-checkbox>
-                                <span class="caption text-blue">Forget password</span>
+                                <v-checkbox label="Remember me" color="deep-purple-darken-1" hide-details></v-checkbox>
+                                <span class="caption text-deep-purple-darken-1">Forget password</span>
                               </v-col>
                             </v-row>
-                            <v-btn color="blue" dark block tile type="submit">Login</v-btn>
+                            <v-btn color="deep-purple-darken-1" dark block tile type="submit">Login</v-btn>
                             <h5 class="text-center text-grey mt-4 mb-3">Or log in using</h5>
                             <div class="d-flex justify-space-between align-center mx-10 mb-16">
                               <v-btn depressed variant="outlined" color="grey-lighten-2">
@@ -46,7 +46,7 @@
                     </form>
                   </v-card-text>
                 </v-col>
-                <v-col cols="12" sm="6" class="d-flex bg-blue justify-center align-center" id="rounded-Col">
+                <v-col cols="12" sm="6" class="d-flex bg-deep-purple-darken-1 justify-center align-center" id="rounded-Col">
                   <div class="text-center;padding: 180px 0; justify-center align-center">
                     <v-card-text class="text-white align-center">
                       <div class="text-center text-h5 font-weight-bold">Don't have an account yet?</div>
@@ -64,7 +64,7 @@
             </v-window-item>
             <v-window-item :value="2">
                 <v-row>
-                <v-col cols="12" sm="6" class="d-flex bg-blue justify-center align-center" id="rounded-Col2">
+                <v-col cols="12" sm="6" class="d-flex bg-deep-purple-darken-1 justify-center align-center" id="rounded-Col2">
                   <div class="text-center; padding: 180px 0; justify-center align-center">
                     <v-card-text class="text-white">
                       <div class="text-center text-h5 font-weight-bold">Already Signed up?</div>
@@ -88,31 +88,31 @@
                       <v-col cols="12" sm="8">
                         <v-row>
                           <v-col cols="12" sm="6">
-                            <v-text-field label="First Name" dense color="blue" autocomplete="false" class="mt-4" hint="Enter your first name to access this website"
+                            <v-text-field label="First Name" dense color="deep-purple-lighten-5" autocomplete="false" class="mt-4" hint="Enter your first name to access this website"
                             :rules="rules"
                             ></v-text-field>
                           </v-col>
                           <v-col cols="12" sm="6">
-                            <v-text-field label="Last Name" dense color="blue" autocomplete="false" class="mt-4" hint="Enter your last name to access this website"
+                            <v-text-field label="Last Name" dense color="deep-purple-lighten-5" autocomplete="false" class="mt-4" hint="Enter your last name to access this website"
                             :rules="rules"
                             ></v-text-field>
                           </v-col>
                         </v-row>
                         <v-col cols="12" sm="12">
                           <v-text-field v-model="emailDefaultValue"
-                            label="Email" dense color="blue" autocomplete="false" class="mt-16" type="email" 
+                            label="Email" dense color="deep-purple-lighten-5" autocomplete="false" class="mt-16" type="email" 
                             hint="Enter your email to access this website" placeholder="your@email.com" :rules="rules"></v-text-field>
                         <v-text-field v-model="passwordDefaultValue"
-                            label="Password" outlined dense color="blue" autocomplete="false" :append-inner-icon="marker ? 'mdi-eye' : 'mdi-eye-off'"
+                            label="Password" outlined dense color="deep-purple-lighten-5" autocomplete="false" :append-inner-icon="marker ? 'mdi-eye' : 'mdi-eye-off'"
                             :type="passwordVisible ? 'text' : 'password'" class="mt-16" hint="Enter your password to access this website" 
                             placeholder="Password" @click:append-inner="togglePasswordVisibility" :rules="rules"></v-text-field>
                         <v-row>
                           <v-col cols="12" class="d-flex justify-space-between align-center">
-                                <v-checkbox label="I accept the AAE" color="blue" hide-details v-model="enabled"></v-checkbox>
-                                <span class="caption text-blue">Terms & Conditions</span>
+                                <v-checkbox label="I accept the AAE" color="deep-purple-darken-1" hide-details v-model="enabled"></v-checkbox>
+                                <span class="caption text-deep-purple-darken-1">Terms & Conditions</span>
                             </v-col>
                         </v-row>  
-                        <v-btn color="blue" dark block tile type="submit" :disabled="!enabled" >Login</v-btn>
+                        <v-btn color="deep-purple-darken-1" dark block tile type="submit" :disabled="!enabled" >Login</v-btn>
                         <h5 class="text-center text-grey mt-4 mb-3">Or log in using</h5>
                         <div class="d-flex justify-space-between align-center mx-10 mb-16">
                           <v-btn depressed variant="outlined" color="grey-lighten-2">
