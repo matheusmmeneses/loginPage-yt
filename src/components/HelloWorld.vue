@@ -33,13 +33,13 @@
                             <v-btn color="blue" dark block tile type="submit">Login</v-btn>
                             <h5 class="text-center text-grey mt-4 mb-3">Or log in using</h5>
                             <div class="d-flex justify-space-between align-center mx-10 mb-16">
-                              <v-btn depressed outlined color="grey-lighten-2">
+                              <v-btn depressed variant="outlined" color="grey-lighten-2">
                                 <v-icon color="red" size="large">mdi-google</v-icon>
                               </v-btn>
-                              <v-btn depressed outlined color="grey-lighten-2">
+                              <v-btn depressed variant="outlined" color="grey-lighten-2">
                                 <v-icon color="blue" size="large">mdi-facebook</v-icon>
                               </v-btn>
-                              <v-btn depressed outlined color="grey-lighten-2">
+                              <v-btn depressed variant="outlined" color="grey-lighten-2">
                                 <v-icon color="light-blue" size="large">mdi-twitter</v-icon>
                               </v-btn>
                             </div>
@@ -48,7 +48,20 @@
                     </v-form>
                   </v-card-text>
                 </v-col>
-                <v-col cols="12" sm="6" class="pa-4 bg-blue rounded-bs-xl"></v-col>
+                <v-col cols="12" sm="6" class="bg-blue justify-center align-center" id="rounded-Col">
+                  <div class="text-center;padding: 180px 0; justify-center align-center">
+                    <v-card-text class="text-white align-center">
+                      <h3 class="text-center">Don't have an account yet?</h3>
+                      <h6 class="text-center">
+                          Let's get you all set up so you can start creating your first <br>
+                          onboarding experience
+                      </h6>
+                    </v-card-text>
+                    <div class="text-center">
+                      <v-btn tile variant="outlined" dark @click="step++">Sign up</v-btn>
+                    </div>
+                  </div>
+                </v-col>
               </v-row>
             </v-window-item>
           </v-window>
@@ -86,5 +99,9 @@ export default {
 
 .v-app .rounded-br-xl {
   border-bottom-right-radius: 300px !important;
+}
+
+#rounded-Col {
+  border-radius: 0% 00% 0% 50%;
 }
 </style>
