@@ -12,21 +12,19 @@
                     <div class="text-center text-subtitle-2 text-grey">Log in to your account so you can continue building
                       <br>and editing your onboarding flows
                     </div>
-                    <v-form @submit.prevent>
+                    <form @submit.prevent="login" >
                         <v-row align="center" justify="center">
                           <v-col cols="12" sm="8">
                             <v-text-field v-model="emailDefaultValue"
                             label="Email" outlined dense color="blue" autocomplete="false" class="mt-16" type="email" 
-                            hint="Enter your email to access this website" placeholder="your@email.com" required></v-text-field>
+                            hint="Enter your email to access this website" placeholder="your@email.com" required :rules="rules"></v-text-field>
                             <v-text-field v-model="passwordDefaultValue"
                             label="Password" outlined dense color="blue" autocomplete="false" :append-inner-icon="marker ? 'mdi-eye' : 'mdi-eye-off'"
                             :type="passwordVisible ? 'text' : 'password'" class="mt-16" hint="Enter your password to access this website" 
-                            placeholder="Password" @click:append-inner="togglePasswordVisibility" required></v-text-field>
+                            placeholder="Password" @click:append-inner="togglePasswordVisibility" required :rules="rules"></v-text-field>
                             <v-row>
-                              <v-col cols="12" sm="7">
-                                <v-checkbox label="Remember me" class="mt-n1" color="blue"></v-checkbox>
-                              </v-col>
-                              <v-col cols="12" sm="5">
+                              <v-col cols="12" class="d-flex justify-space-between align-center">
+                                <v-checkbox label="Remember me" color="blue" hide-details></v-checkbox>
                                 <span class="caption text-blue">Forget password</span>
                               </v-col>
                             </v-row>
@@ -45,10 +43,10 @@
                             </div>
                           </v-col>
                       </v-row>
-                    </v-form>
+                    </form>
                   </v-card-text>
                 </v-col>
-                <v-col cols="12" sm="6" class="bg-blue justify-center align-center" id="rounded-Col">
+                <v-col cols="12" sm="6" class="d-flex bg-blue justify-center align-center" id="rounded-Col">
                   <div class="text-center;padding: 180px 0; justify-center align-center">
                     <v-card-text class="text-white align-center">
                       <h3 class="text-center">Don't have an account yet?</h3>
@@ -77,10 +75,23 @@ export default {
     return {
       marker: true,
       passwordVisible: false,
+      emailDefaultValue: '',
+      passwordDefaultValue: '',
+      rules: [
+      value => {
+          if (value) return true
+
+          return 'You must enter a first name.'
+        },
+      ],
       step: 1,
     };
   },
   methods: {
+    login() {
+      console.log("oi")
+    },
+
     togglePasswordVisibility() {
         this.marker = !this.marker
         this.passwordVisible = !this.passwordVisible
@@ -102,6 +113,6 @@ export default {
 }
 
 #rounded-Col {
-  border-radius: 0% 00% 0% 50%;
+  border-radius: 0% 0% 0% 50%;
 }
 </style>
